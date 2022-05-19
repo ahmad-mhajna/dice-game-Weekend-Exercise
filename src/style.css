@@ -1,0 +1,70 @@
+.body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.Player1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 38%;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 20%;
+}
+.Player2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 38%;
+}
+.input {
+  text-align: center;
+}
+button {
+  width: 7rem;
+  height: 3rem;
+  border: 2px black solid;
+  background-color: transparent;
+  color: black;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
+.dice1,
+.dice2,
+.dice3,
+.dice4,
+.dive5,
+.dice6 {
+  width: 10rem;
+  height: 10rem;
+}
+.dice1 {
+  background: url(./img/Dice1.png) no-repeat center center/cover;
+}
+.dice2 {
+  background: url(./img/Dice2.png) no-repeat center center/cover;
+}
+.dice3 {
+  background: url(./img/Dice3.png) no-repeat center center/cover;
+}
+.dice4 {
+  background: url(./img/Dice4.png) no-repeat center center/cover;
+}
+.dice5 {
+  background: url(./img/Dice5.png) no-repeat center center/cover;
+}
+.dice6 {
+  background: url(./img/Dice6.png) no-repeat center center/cover;
+}
