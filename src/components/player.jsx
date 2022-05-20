@@ -3,11 +3,15 @@ import React from "react";
 class Player extends React.Component {
   render() {
     return (
-      <div className="player">
+      <div
+        className={`${this.props.className} ${
+          this.props.isTurn ? "selected" : ""
+        }`}
+      >
         <h1>Player {this.props.playerNumber}</h1>
-        <H2 text="score" />
+        <H2 text="Score" />
         <H2 text={this.props.score} />
-        <H2 text="current score" />
+        <H2 text="Current Score" />
         <H2 text={this.props.currentScore} />
       </div>
     );

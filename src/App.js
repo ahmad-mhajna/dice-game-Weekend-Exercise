@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./components/container";
 import Player from "./components/player";
+import Winscreen from "./components/winner";
 import "./style.css";
 class App extends React.Component {
   state = {
@@ -9,6 +10,8 @@ class App extends React.Component {
     dice: [0, 0],
     scoreToWin: 100,
     playerOneTurn: true,
+    hidden: true,
+    whoWon: 0,
   };
   initialState = { ...this.state };
   rollDice = () => {
@@ -58,9 +61,9 @@ class App extends React.Component {
     let score = this.state.score;
     let scoreToWin = this.state.scoreToWin;
     if (score[0] === scoreToWin || score[1] > scoreToWin)
-      console.log("player1 won");
+      this.setState({ hidden: false, whoWon: 1 });
     else if (score[1] === scoreToWin || score[0] > scoreToWin)
-      console.log("player2 won");
+      this.setState({ hidden: false, whoWon: 2 });
   };
   scoreToWin = (event) => {
     let newValue = +event.target.value;
@@ -73,6 +76,8 @@ class App extends React.Component {
           score={this.state.score[0]}
           currentScore={this.state.currentScore[0]}
           playerNumber="1"
+          className="player1"
+          isTurn={this.state.playerOneTurn === true}
         />
         <Container
           onChangeinput={this.scoreToWin}
@@ -88,7 +93,17 @@ class App extends React.Component {
           score={this.state.score[1]}
           currentScore={this.state.currentScore[1]}
           playerNumber="2"
+          className="player2"
+          isTurn={this.state.playerOneTurn === false}
         />
+        {!this.state.hidden && (
+          <Winscreen
+            whoWon={this.state.whoWon}
+            resetGame={() => {
+              this.setState(this.initialState);
+            }}
+          />
+        )}
       </div>
     );
   }

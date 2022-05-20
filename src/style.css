@@ -1,24 +1,66 @@
-.body {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 40px;
 }
-.player {
+.container-winScreen {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.winScreen {
+  width: 50%;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  width: 38%;
+  background-color: green;
+}
+.body {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.player1,
+.player2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  flex: 2;
+}
+.player1 {
+  background-color: darkred;
+}
+.player2 {
+  background-color: darkblue;
+}
+.player1.selected {
+  background-color: red;
+}
+.player2.selected {
+  background-color: blue;
 }
 .container {
+  background-color: gray;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  width: 20%;
+  flex: 1;
 }
 .input {
   text-align: center;
+  width: 100%;
 }
 button {
   width: 7rem;
@@ -26,7 +68,6 @@ button {
   border: 2px black solid;
   background-color: transparent;
   color: black;
-  font-size: 16px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -41,8 +82,8 @@ button:hover {
 .dice4,
 .dice5,
 .dice6 {
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
 }
 .dice1 {
   background: url(./img/Dice1.png) no-repeat center center/cover;
