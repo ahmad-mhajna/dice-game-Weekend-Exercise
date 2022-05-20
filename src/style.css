@@ -34,11 +34,12 @@ button:hover {
   background-color: black;
   color: white;
 }
+.dice0,
 .dice1,
 .dice2,
 .dice3,
 .dice4,
-.dive5,
+.dice5,
 .dice6 {
   width: 10rem;
   height: 10rem;

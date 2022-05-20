@@ -6,7 +6,8 @@ class Input extends React.Component {
         <input
           className={this.props.className}
           type="number"
-          placeholder="100"
+          onChange={this.props.onChange}
+          value={this.props.value}
         />
       </div>
     );
