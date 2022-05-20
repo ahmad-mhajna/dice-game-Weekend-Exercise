@@ -72,7 +72,7 @@ class App extends React.Component {
         <Player
           score={this.state.score[0]}
           currentScore={this.state.currentScore[0]}
-          playerNumber="2"
+          playerNumber="1"
         />
         <Container
           onChangeinput={this.scoreToWin}
