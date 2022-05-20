@@ -66,8 +66,10 @@ class App extends React.Component {
       this.setState({ hidden: false, whoWon: 2 });
   };
   scoreToWin = (event) => {
-    let newValue = +event.target.value;
-    this.setState({ scoreToWin: newValue });
+    if (!/[e-]+/gi.test(event.target.value) && event.target.value !== "") {
+      let newValue = +event.target.value;
+      this.setState({ scoreToWin: newValue });
+    }
   };
   render() {
     return (
