@@ -7,8 +7,8 @@ class Container extends React.Component {
     return (
       <div className="container">
         <Button className="newgame" text="New game" />
-        <Dice className="dice1" />
-        <Dice className="dice2" />
+        <Dice className={`dice${this.props.dice[0]}`} />
+        <Dice className={`dice${this.props.dice[1]}`} />
         <Button className="Hold" text=" Hold" />
         <Button className="Roll-dice" text="Roll Dice" />
         <Input className="input" />

@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
 }
-.Player1 {
+.player {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -16,13 +16,6 @@
   justify-content: space-evenly;
   flex-direction: column;
   width: 20%;
-}
-.Player2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  width: 38%;
 }
 .input {
   text-align: center;
